@@ -8,31 +8,96 @@
     "bot",
     "CASEYRHODES-XMD",
     "nodejs",
-    "baileys"
+    "baileys",
+    "whatsapp"
   ],
   "repository": "https://github.com/caseyrhodes-tech/CASEYRHODES-XMD",
   "success_url": "/",
-  "stack": "container",
   "env": {
     "SESSION_ID": {
-      "description": "Put the session-id here (can be any random string)",
+      "description": "Put the session-id here (can be any random string for initial setup)",
       "required": true,
       "value": "CASEYRHODES-XMD-SESSION"
     },
     "PREFIX": {
-      "description": "Bot command prefix (use . or !)",
+      "description": "Bot command prefix (use a single character like . or !)",
       "required": false,
       "value": "."
     },
     "MODE": {
-      "description": "Bot operation mode: public or private",
+      "description": "Bot operation mode: public, private, or self",
       "required": false,
       "value": "public"
     },
     "OWNER_NUMBER": {
-      "description": "Bot owner's WhatsApp number with country code",
+      "description": "Bot owner's WhatsApp number with country code (no + or spaces)",
       "required": true,
       "value": "254112192119"
+    },
+    "OWNER_NAME": {
+      "description": "Bot Owner Name",
+      "required": false,
+      "value": "CASEYRHODES-TECH"
+    },
+    "BOT_NAME": {
+      "description": "Name displayed by the bot",
+      "required": false,
+      "value": "CASEYRHODES-XMD"
+    },
+    "STICKER_PACKNAME": {
+      "description": "Sticker pack name for sticker creation",
+      "required": false,
+      "value": "CASEYRHODES-XMD"
+    },
+    "STICKER_AUTHOR": {
+      "description": "Sticker pack author name",
+      "required": false,
+      "value": "Caseyrhodes Tech"
+    },
+    "ANTI_DELETE": {
+      "description": "Show deleted messages (true/false)",
+      "required": false,
+      "value": "true"
+    },
+    "ALWAYS_ONLINE": {
+      "description": "Keep bot always online (true/false)",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_REPLY": {
+      "description": "Enable auto-reply feature (true/false)",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_STICKER": {
+      "description": "Auto-convert images to stickers (true/false)",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_STATUS_SEEN": {
+      "description": "Automatically seen status updates (true/false)",
+      "required": false,
+      "value": "true"
+    },
+    "AUTO_STATUS_REACT": {
+      "description": "Automatically react to status (true/false)",
+      "required": false,
+      "value": "true"
+    },
+    "AUTO_STATUS_REPLY": {
+      "description": "Auto reply to status (true/false)",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_STATUS_MSG": {
+      "description": "Custom message for status reply",
+      "required": false,
+      "value": "SEEN YOUR STATUS BY CASEYRHODES TECH 🇰🇪"
+    },
+    "ANTI_LINK": {
+      "description": "Auto-remove group invite links (true/false)",
+      "required": false,
+      "value": "true"
     }
   },
   "buildpacks": [
