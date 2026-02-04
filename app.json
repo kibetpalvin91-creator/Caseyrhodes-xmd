@@ -8,133 +8,33 @@
     "bot",
     "CASEYRHODES-XMD",
     "nodejs",
-    "baileys",
-    "whatsapp"
+    "baileys"
   ],
   "repository": "https://github.com/caseyrhodes-tech/CASEYRHODES-XMD",
   "success_url": "/",
   "stack": "container",
   "env": {
     "SESSION_ID": {
-      "description": "Put the session-id here (can be any random string for initial setup)",
+      "description": "Put the session-id here (can be any random string)",
       "required": true,
       "value": "CASEYRHODES-XMD-SESSION"
     },
     "PREFIX": {
-      "description": "Bot command prefix (use a single character like . or !)",
+      "description": "Bot command prefix (use . or !)",
       "required": false,
       "value": "."
     },
     "MODE": {
-      "description": "Bot operation mode: public, private, self, or group",
+      "description": "Bot operation mode: public or private",
       "required": false,
       "value": "public"
     },
     "OWNER_NUMBER": {
-      "description": "Bot owner's WhatsApp number with country code (no + or spaces)",
+      "description": "Bot owner's WhatsApp number with country code",
       "required": true,
       "value": "254112192119"
-    },
-    "BOT_NAME": {
-      "description": "Name displayed by the bot",
-      "required": false,
-      "value": "CASEYRHODES-XMD"
-    },
-    "STICKER_PACKNAME": {
-      "description": "Sticker pack name for sticker creation",
-      "required": false,
-      "value": "CASEYRHODES-XMD"
-    },
-    "STICKER_AUTHOR": {
-      "description": "Sticker pack author name",
-      "required": false,
-      "value": "Caseyrhodes Tech"
-    },
-    "ANTI_DELETE": {
-      "description": "Show deleted messages (true/false)",
-      "required": false,
-      "value": "true"
-    },
-    "ALWAYS_ONLINE": {
-      "description": "Keep bot always online (true/false)",
-      "required": false,
-      "value": "false"
-    },
-    "AUTO_READ_STATUS": {
-      "description": "Automatically read status updates (true/false)",
-      "required": false,
-      "value": "true"
-    },
-    "AUTO_REPLY": {
-      "description": "Enable auto-reply feature (true/false)",
-      "required": false,
-      "value": "false"
-    },
-    "AUTO_STICKER": {
-      "description": "Auto-convert images to stickers (true/false)",
-      "required": false,
-      "value": "false"
-    },
-    "ANTI_LINK": {
-      "description": "Auto-remove group invite links (true/false)",
-      "required": false,
-      "value": "true"
-    },
-    "ANTI_BAD_WORD": {
-      "description": "Block bad words in groups (true/false)",
-      "required": false,
-      "value": "true"
-    },
-    "MAX_UPLOAD_SIZE": {
-      "description": "Maximum file upload size in MB (1-100)",
-      "required": false,
-      "value": "100"
-    },
-    "SUDO": {
-      "description": "Additional admin numbers (comma-separated, no spaces)",
-      "required": false,
-      "value": ""
-    },
-    "LANGUAGE": {
-      "description": "Bot language (en, es, id, etc.)",
-      "required": false,
-      "value": "en"
-    },
-    "WORK_TYPE": {
-      "description": "How bot works: public, private, or self",
-      "required": false,
-      "value": "public"
-    },
-    "DATABASE_URL": {
-      "description": "MongoDB URI for database (optional for Heroku)",
-      "required": false,
-      "value": ""
-    },
-    "LOG_LEVEL": {
-      "description": "Logging level: error, warn, info, debug",
-      "required": false,
-      "value": "info"
-    },
-    "HEROKU_APP_NAME": {
-      "description": "Your Heroku app name (if deploying on Heroku)",
-      "required": false
-    },
-    "HEROKU_API_KEY": {
-      "description": "Heroku API key (for auto-restart features)",
-      "required": false
     }
   },
-  "formation": {
-    "web": {
-      "quantity": 1,
-      "size": "free"
-    }
-  },
-  "addons": [
-    {
-      "plan": "heroku-postgresql:hobby-dev"
-    }
-  ],
   "buildpacks": [
     {
       "url": "heroku/nodejs"
