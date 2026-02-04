@@ -1,90 +1,149 @@
 {
   "name": "CASEYRHODES-XMD",
-  "description": "An Advanced Whatsapp bot 🚀 built for fast automation, media tool, and smooth group management developed by Caseyrhodes tech",
+  "description": "An Advanced WhatsApp bot 🚀 built for fast automation, media tool, and smooth group management developed by Caseyrhodes tech",
   "logo": "https://files.catbox.moe/vcdwmp.jpg",
-  "keywords": ["whatsapp-bot", "automation", "bot", "CASEYRHODES-XMD"],
+  "keywords": [
+    "whatsapp-bot",
+    "automation",
+    "bot",
+    "CASEYRHODES-XMD",
+    "nodejs",
+    "baileys",
+    "whatsapp"
+  ],
+  "repository": "https://github.com/caseyrhodes-tech/CASEYRHODES-XMD",
   "success_url": "/",
   "stack": "container",
   "env": {
     "SESSION_ID": {
-      "description": "Put the session-id here.",
+      "description": "Put the session-id here (can be any random string for initial setup)",
       "required": true,
-      "value": ""
-    },
-    "STICKER_NAME": {
-      "description": "Type your sticker pack name.",
-      "required": false,
-      "value": "CASEYRHODES-XMD"
+      "value": "CASEYRHODES-XMD-SESSION"
     },
     "PREFIX": {
-      "description": "Paste your bot prefix. Note: Don't use null prefix.",
+      "description": "Bot command prefix (use a single character like . or !)",
       "required": false,
       "value": "."
     },
     "MODE": {
-      "description": "Select your bot work type: public, private, inbox, or group.",
+      "description": "Bot operation mode: public, private, self, or group",
       "required": false,
       "value": "public"
     },
+    "OWNER_NUMBER": {
+      "description": "Bot owner's WhatsApp number with country code (no + or spaces)",
+      "required": true,
+      "value": "254112192119"
+    },
+    "BOT_NAME": {
+      "description": "Name displayed by the bot",
+      "required": false,
+      "value": "CASEYRHODES-XMD"
+    },
+    "STICKER_PACKNAME": {
+      "description": "Sticker pack name for sticker creation",
+      "required": false,
+      "value": "CASEYRHODES-XMD"
+    },
+    "STICKER_AUTHOR": {
+      "description": "Sticker pack author name",
+      "required": false,
+      "value": "Caseyrhodes Tech"
+    },
     "ANTI_DELETE": {
-      "description": "Set true to show deleted messages.",
+      "description": "Show deleted messages (true/false)",
       "required": false,
       "value": "true"
     },
     "ALWAYS_ONLINE": {
-      "description": "Make it true if you want the bot to always appear online.",
+      "description": "Keep bot always online (true/false)",
       "required": false,
       "value": "false"
     },
+    "AUTO_READ_STATUS": {
+      "description": "Automatically read status updates (true/false)",
+      "required": false,
+      "value": "true"
+    },
     "AUTO_REPLY": {
-      "description": "Make it true if you want automatic reply.",
+      "description": "Enable auto-reply feature (true/false)",
       "required": false,
       "value": "false"
     },
     "AUTO_STICKER": {
-      "description": "Make it true if you want automatic sticker conversion.",
+      "description": "Auto-convert images to stickers (true/false)",
       "required": false,
       "value": "false"
-    },
-    "AUTO_STATUS_SEEN": {
-      "description": "Make it true for automatic status seen.",
-      "required": false,
-      "value": "true"
-    },
-    "AUTO_STATUS_REACT": {
-      "description": "Make it true for automatic status reaction or like.",
-      "required": false,
-      "value": "true"
-    },
-    "AUTO_STATUS_REPLY": {
-      "description": "Make it true for auto reply message on status seen.",
-      "required": false,
-      "value": "false"
-    },
-    "AUTO_STATUS_MSG": {
-      "description": "Type custom message for status reply.",
-      "required": false,
-      "value": "*SEEN YOUR STATUS BY CASEYRHODES TECH 🇰🇪*"
-    },
-    "OWNER_NAME": {
-      "description": "Type Bot Owner Name.",
-      "required": false,
-      "value": "CASEYRHODES-TECH"
-    },
-    "OWNER_NUMBER": {
-      "description": "Put the owner number for bot.",
-      "required": false,
-      "value": "254112192119"
-    },
-    "BOT_NAME": {
-      "description": "Type here the bot name.",
-      "required": false,
-      "value": "CASEYRHODES-XMD"
     },
     "ANTI_LINK": {
-      "description": "Make it true if you want bot to auto remove group links.",
+      "description": "Auto-remove group invite links (true/false)",
       "required": false,
       "value": "true"
+    },
+    "ANTI_BAD_WORD": {
+      "description": "Block bad words in groups (true/false)",
+      "required": false,
+      "value": "true"
+    },
+    "MAX_UPLOAD_SIZE": {
+      "description": "Maximum file upload size in MB (1-100)",
+      "required": false,
+      "value": "100"
+    },
+    "SUDO": {
+      "description": "Additional admin numbers (comma-separated, no spaces)",
+      "required": false,
+      "value": ""
+    },
+    "LANGUAGE": {
+      "description": "Bot language (en, es, id, etc.)",
+      "required": false,
+      "value": "en"
+    },
+    "WORK_TYPE": {
+      "description": "How bot works: public, private, or self",
+      "required": false,
+      "value": "public"
+    },
+    "DATABASE_URL": {
+      "description": "MongoDB URI for database (optional for Heroku)",
+      "required": false,
+      "value": ""
+    },
+    "LOG_LEVEL": {
+      "description": "Logging level: error, warn, info, debug",
+      "required": false,
+      "value": "info"
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Your Heroku app name (if deploying on Heroku)",
+      "required": false
+    },
+    "HEROKU_API_KEY": {
+      "description": "Heroku API key (for auto-restart features)",
+      "required": false
     }
-  }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ]
 }
