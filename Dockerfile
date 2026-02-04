@@ -1,10 +1,6 @@
-FROM node:lts
-
+FROM node:18-alpine
 WORKDIR /app
-COPY . .
-
+COPY package*.json ./
 RUN npm install
-
-EXPOSE 3000
-
-CMD ["node", "index.js"]
+COPY . .
+CMD ["npm", "start"]
