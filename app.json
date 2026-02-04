@@ -1,0 +1,90 @@
+{
+  "name": "CASEYRHODES-XMD",
+  "description": "An Advanced Whatsapp bot 🚀 built for fast automation, media tool, and smooth group management developed by Caseyrhodes tech",
+  "logo": "https://files.catbox.moe/vcdwmp.jpg",
+  "keywords": ["whatsapp-bot", "automation", "bot", "CASEYRHODES-XMD"],
+  "success_url": "/",
+  "stack": "container",
+  "env": {
+    "SESSION_ID": {
+      "description": "Put the session-id here.",
+      "required": true,
+      "value": ""
+    },
+    "STICKER_NAME": {
+      "description": "Type your sticker pack name.",
+      "required": false,
+      "value": "CASEYRHODES-XMD"
+    },
+    "PREFIX": {
+      "description": "Paste your bot prefix. Note: Don't use null prefix.",
+      "required": false,
+      "value": "."
+    },
+    "MODE": {
+      "description": "Select your bot work type: public, private, inbox, or group.",
+      "required": false,
+      "value": "public"
+    },
+    "ANTI_DELETE": {
+      "description": "Set true to show deleted messages.",
+      "required": false,
+      "value": "true"
+    },
+    "ALWAYS_ONLINE": {
+      "description": "Make it true if you want the bot to always appear online.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_REPLY": {
+      "description": "Make it true if you want automatic reply.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_STICKER": {
+      "description": "Make it true if you want automatic sticker conversion.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_STATUS_SEEN": {
+      "description": "Make it true for automatic status seen.",
+      "required": false,
+      "value": "true"
+    },
+    "AUTO_STATUS_REACT": {
+      "description": "Make it true for automatic status reaction or like.",
+      "required": false,
+      "value": "true"
+    },
+    "AUTO_STATUS_REPLY": {
+      "description": "Make it true for auto reply message on status seen.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_STATUS_MSG": {
+      "description": "Type custom message for status reply.",
+      "required": false,
+      "value": "*SEEN YOUR STATUS BY CASEYRHODES TECH 🇰🇪*"
+    },
+    "OWNER_NAME": {
+      "description": "Type Bot Owner Name.",
+      "required": false,
+      "value": "CASEYRHODES-TECH"
+    },
+    "OWNER_NUMBER": {
+      "description": "Put the owner number for bot.",
+      "required": false,
+      "value": "254112192119"
+    },
+    "BOT_NAME": {
+      "description": "Type here the bot name.",
+      "required": false,
+      "value": "CASEYRHODES-XMD"
+    },
+    "ANTI_LINK": {
+      "description": "Make it true if you want bot to auto remove group links.",
+      "required": false,
+      "value": "true"
+    }
+  }
+}
